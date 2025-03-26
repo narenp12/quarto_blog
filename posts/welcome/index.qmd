@@ -1,0 +1,27 @@
+---
+title: "Welcome To My Blog"
+author: "Tristan O'Malley"
+date: "2025-03-23"
+categories: [news]
+---
+
+This is the first post in a Quarto blog. Welcome!
+
+![](thumbnail.jpg)
+
+Since this post doesn't specify an explicit `image`, the first image in the post will be used in the listing page of posts.
+
+```{r}
+library(tidyverse)
+library(tidytext)
+library(stringr)
+library(pdftools)
+library(syuzhet)
+library(textdata)
+library(readtext)
+library(tm)
+library(quanteda)
+library(Rgraphviz)
+library(topicmodels)
+library(gridExtra)
+```
