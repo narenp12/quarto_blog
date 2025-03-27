@@ -13,4 +13,6 @@ about:
 
 ---
 
+Hello! My name is Naren Prakash and I'm an upcoming graduate of UCLA majoring in Statistics and Data Science. I really want to become a data scientist and so this is a little chronicle of my personal thoughts and also a bit of my road to hopefully achieving my dream.
+
 This is my personal website to post into the abyss about the things I like and things I am doing / want to do in my free time.

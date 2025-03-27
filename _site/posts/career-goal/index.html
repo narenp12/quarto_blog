@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Naren Prakash">
+<meta name="dcterms.date" content="2024-12-24">
 
-<title>My Blog – Naren’s Personal Site</title>
+<title>How I ended up wanting to become a data scientist (a long post) – Naren’s Personal Site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c37a40b267d3139d93432c283e34c257.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-76a684d3da164f357bdb205775589213.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c37a40b267d3139d93432c283e34c257.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-76a684d3da164f357bdb205775589213.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,77 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Naren’s Personal Site</span>
     </a>
   </div>
@@ -151,7 +93,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -175,188 +117,63 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">How I ended up wanting to become a data scientist (a long post)</h1>
+            <p class="subtitle lead">A decision I made in the summer of 2022</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">goals</div>
+                <div class="quarto-category">career</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Naren Prakash </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 24, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(4)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2FyZWVy">career <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z29hbHM=">goals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cHJvamVjdA==">project <span class="quarto-category-count">(1)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p><img src="general-fos-hero-2.png" class="img-fluid"></p>
+<section id="who-knows-what-they-want-to-major-in-anyway" class="level2">
+<h2 class="anchored" data-anchor-id="who-knows-what-they-want-to-major-in-anyway">Who knows what they want to major in anyway?</h2>
+<p>To be honest I never really anticipated finding myself in this position. For pretty much as long as I could remember, I was convinced I was going to become a scientist. Whether it be biology or chemistry, I knew the classes I enjoyed the most every single year were those science classes. Mathematics was the bane of my existence, a topic I had neither the talent nor the patience for. I would never choose a career with that as the focus.</p>
+<p>Even when it came to applying to college, I applied to colleges based on googling “best colleges for science” and then just choosing some that sounded like they had cool programs. Going into college my aspirations had changed a bit, but I was still of the belief I would become a scientist. I entered UCLA in 2021 as a Biology major, which was what I applied for in most of the applications I sent out. The first few quarters were fun, I mostly took the chemistry courses and math courses required for lower division life science requirements. To my own surprise, I really enjoyed the math for life scientists (shoutout Professor Jukka) but I really enjoyed the chemistry classes too. It wasn’t until my spring quarter that I was finally able to take what I came here for, a biology class.</p>
+<p>It started off fine it wasn’t exactly some kind of dramatic realization I came to immediately. As the quarter progressed though I found myself falling asleep during lecture and just not being able to invest myself into the content. At first, I thought it was a general problem with my concentration and work. At the same time though, I was taking organic chemistry and seemed to have no issues staying alert in that class. As the year ended, I wasn’t sure if I truly wanted to be a biology student for the rest of my 4 years. That being said, I had already signed up for my classes for the next fall.</p>
+<p>At first I refused to think of even leaving the life sciences department. If I left, what was the point of my entire first year? Did I just waste money and time? I spent my time reading about every offered major on the UCLA course websites, trying to decide what I really wanted to learn about. When I truly thought about it, I realized that maybe my enjoyment for the life sciences math wasn’t some random exception. After all, I had really enjoyed my time taking AP Statistics back in high school. Despite that, I feared not being proficient enough for the math and thought things might just be easier if I stayed doing what I was doing. After all, I couldn’t even enroll in new classes until much later as new student orientation had already begun.</p>
+<p>I talked to many people before ultimately making my decision, but I entered my new path Fall 2022 as I began taking the math prerequisite courses for becoming a stats major. Though I did have to make some adjustments initially, it didn’t take long for me to realize I had made the right decision for myself. Looking back at my own interests in hindsight, it almost seemed obvious the entire time. When I was little, I loved memorizing sports statistics, especially the stats of my favorite athletes. When I first learned programming and computer science in high school, the first independent projects I created were all sports statistics related. I had just attributed this to my love for sports, but perhaps that interest was always there and I just had a mental block.</p>
+<p>Since changing my major, I can confidently say I have no regrets at all. I’ve truly enjoyed every single class I’ve taken since that day. Every day I spend in class or working on something only furthers my belief that I’m in this for life. Getting paid to do the most fun stuff of all time? That career sounds way too good to be true, but I really cannot think of a better way to live. That being said, I don’t regret the path I was on before switching. Sometimes I think about what I could’ve done with that extra time, but there are many experiences I don’t get in that timeline. As for this timeline, I’m just going to put my head down and keep trying to learn about a field that is always changing. Living in the age of information is truly a blessing, and I fully intend to take advantage of it.</p>
+<p><strong>Shoutout to the entire UCLA Statistics department for providing such a fun and comprehensive education. Professor Christou you are my GOAT.</strong></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cw==" data-listing-date-sort="1743050937000" data-listing-file-modified-sort="1743050937827" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="294">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/quarto.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">A new blog home</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">This is very much not a sponsored post (though if they wanted to sponsor me I would absolutely accept) but after “discovering” quarto, I’ve decided to move my personal blog…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Mar 26, 2025
-</div>
-<div class="listing-author">
-Naren Prakash
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1742965200000" data-listing-file-modified-sort="1742976558179" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/post-with-code/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/index.html" class="no-external">This is a post with executable code.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Mar 26, 2025
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bmV3cyUyQ3Byb2plY3Q=" data-listing-date-sort="1735624800000" data-listing-file-modified-sort="1743051981850" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="620">
-<div class="thumbnail">
-<p><a href="./posts/portfolio-website/index.html" class="no-external"></a></p><a href="./posts/portfolio-website/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/portfolio-website/website_image.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/portfolio-website/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/portfolio-website/index.html" class="no-external">Why I made this website</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/portfolio-website/index.html" class="no-external">A 2024 Winter Break project I finished up right before the new year</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdA=='); return false;">
-project
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/portfolio-website/index.html" class="no-external">Note: This is about my professional website. Check it out if you haven’t!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/portfolio-website/index.html" class="no-external">
-<div class="listing-date">
-Dec 31, 2024
-</div>
-<div class="listing-author">
-Naren Prakash
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Z29hbHMlMkNjYXJlZXI=" data-listing-date-sort="1735020000000" data-listing-file-modified-sort="1743051555524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="749">
-<div class="thumbnail">
-<p><a href="./posts/career-goal/index.html" class="no-external"></a></p><a href="./posts/career-goal/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/career-goal/general-fos-hero-2.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/career-goal/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/career-goal/index.html" class="no-external">How I ended up wanting to become a data scientist (a long post)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/career-goal/index.html" class="no-external">A decision I made in the summer of 2022</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Z29hbHM='); return false;">
-goals
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y2FyZWVy'); return false;">
-career
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/career-goal/index.html" class="no-external">To be honest I never really anticipated finding myself in this position. For pretty much as long as I could remember, I was convinced I was going to become a scientist.…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/career-goal/index.html" class="no-external">
-<div class="listing-date">
-Dec 24, 2024
-</div>
-<div class="listing-author">
-Naren Prakash
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
