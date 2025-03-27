@@ -25,7 +25,7 @@
     "href": "index.html",
     "title": "My Blog",
     "section": "",
-    "text": "A new blog home\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 26, 2025\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 26, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWhy I made this website\n\n\nA 2024 Winter Break project I finished up right before the new year\n\n\n\nnews\n\n\nproject\n\n\n\n\n\n\n\n\n\nDec 31, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nHow I ended up wanting to become a data scientist (a long post)\n\n\nA decision I made in the summer of 2022\n\n\n\ngoals\n\n\ncareer\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\nNo matching items"
+    "text": "A new blog home\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 26, 2025\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\nMar 26, 2025\n\n\nHarlow Malloc\n\n\n\n\n\n\n\n\n\n\n\n\nWhy I made this website\n\n\nA 2024 Winter Break project I finished up right before the new year\n\n\n\nnews\n\n\nproject\n\n\n\n\n\n\n\n\n\nDec 31, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nHow I ended up wanting to become a data scientist (a long post)\n\n\nA decision I made in the summer of 2022\n\n\n\ngoals\n\n\ncareer\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nAutoencoder for Anomaly Detection\n\n\nDone as a ML / Data Science Intern @ Halliburton\n\n\n\ninternship\n\n\nproject\n\n\nPython\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nData Generator\n\n\nDone as a ML / Data Science Intern @ Halliburton\n\n\n\ninternship\n\n\nproject\n\n\nPython\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/career-goal/index.html",
@@ -54,5 +54,131 @@
     "title": "Why I made this website",
     "section": "My own little place to post into the void",
     "text": "My own little place to post into the void\nI can’t tell you how many times I’ve looked up cool people on Google and they’ve had their own little nice website with fancy logos and nice-looking pages and all that. To be frank, that was probably the main reason I wanted my own website. I too wanted a shiny place that was all about me.\nDespite having this in mind for quite a while, I never actually tried to make one of my own until recently. For the longest time, I had assumed even getting a domain name would mean shelling out money for eternity just to have a site I could send to people. Who knew how many people would actually look at it, let alone view the other content?\nUltimately, what pushed me to really try it out was wanting to just have one place where I could show all my friends and family the little things I did in my free time that I thought were cool. At the end of the day, even if no one else viewed this website organically, I would be happy just having a place with a nice little write-up for everything I’ve tinkered with. The sudden motivation for this website really came in late September 2024 on a random weekend. That’s what led me to create my first website using Netlify. I didn’t exactly know how to do web development with code directly, so I just used their visual editor and a website template and called it a day. One night later, I had a fully functional website with posts I could show everyone. However, the longer I had the site, the more discontent I became with it. I almost felt like I cheated to get a website that wasn’t even cohesive and didn’t represent what I wanted my website to say about me. With a busy school quarter, I pushed it down the line with the intention of eventually creating a site I was proud of.\nI hadn’t used JavaScript and CSS in an extremely long time. Not since one of my first projects ever that I created in high school—a basketball player comparison tool that scraped data from the web—had I attempted to make a whole website of my own. Even then, it was barely something that could be called a website. It was a bare-bones page with the project tool as the main focus, and the website was basically just a place to have it. I wanted to use Next.js because I’d joined a club in the fall that created really nice-looking visuals and animations with that as their main language. I had no idea what it was, but with the help of YouTube videos and the internet, I was able to cobble up a functional website I can say I am proud of.\nIs my website amazing and impressive? I don’t know, but I’m glad I have my own little place to put things that I want to see. The experience of creating the site was a blast, and I hope to mess around with a lot more in the future so I can add even more to this website. If anyone stumbles across this in the future and would like to give me feedback on my website (or even my code), I would greatly appreciate it. This is something I hope to continue working on for the rest of my life, and I hope 2025 brings more things for me to be proud of. Here’s to the future.\nThank you for reading my rambling justification for the existence of this website. If you think I could make this better (I definitely can), I would love to hear new ideas.\nYou can check out the code I used to create it here!"
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#done-as-a-ml-data-science-intern-halliburton",
+    "href": "posts/anomaly-detection/index.html#done-as-a-ml-data-science-intern-halliburton",
+    "title": "How I ended up wanting to become a data scientist (a long post)",
+    "section": "Done as a ML / Data Science Intern @ Halliburton",
+    "text": "Done as a ML / Data Science Intern @ Halliburton\n\nHow do we identify potentially dangerous situations and act quickly in real time?"
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#the-problem",
+    "href": "posts/anomaly-detection/index.html#the-problem",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "The Problem",
+    "text": "The Problem\nWe all know equipment maintenance is important for saving money, reducing waste, and preventing accidents as a result of equipment malfunctions.\nIn this case, we want to make sure company trucks function properly by monitoring the input data from the sensors on each truck. How do we set up an alert system so that when the sensor has abnormal readings, we can immediately take a look at the equipment to prevent accidents?\nTraditional statistical methods have many definitions for an outlier we could use to identify those readings. However, with so much sensor data, it might be better to use a larger scale ML model to identify these in real time so prompt action can be taken."
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#idea-reconstruction-autoencoder",
+    "href": "posts/anomaly-detection/index.html#idea-reconstruction-autoencoder",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "Idea: Reconstruction Autoencoder",
+    "text": "Idea: Reconstruction Autoencoder\nThis is where the reconstruction autoencoder comes into play.\nWe can use this machine learning model to identify anomalies in real time! Before delving into how we created it, let’s break down what this means."
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#what-even-is-an-autoencoder",
+    "href": "posts/anomaly-detection/index.html#what-even-is-an-autoencoder",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "What even is an autoencoder?",
+    "text": "What even is an autoencoder?\nAn autoencoder is a type of neural network that takes in a large amount of high dimensional data and compresses the information into a smaller representation. After this, it expands the compressed representation into a representation of equal size to the original.\nThere are two main parts of the autoencoder:"
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#encoder",
+    "href": "posts/anomaly-detection/index.html#encoder",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "Encoder",
+    "text": "Encoder\nThis is where we compress the input data into a smaller representation.\nFor example, say we have a dataset with 500,000 dimensions. We create a representation of the data with only 300 dimensions."
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#decoder",
+    "href": "posts/anomaly-detection/index.html#decoder",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "Decoder",
+    "text": "Decoder\nThis is where we take the compressed representation and reconstruct the original data.\nIn this example, we would take the 300-dimension representation and create a dataset with 500,000 dimensions (just like the original set)."
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#why-do-we-compress-the-data-just-to-make-one-thats-the-same-size-as-the-original",
+    "href": "posts/anomaly-detection/index.html#why-do-we-compress-the-data-just-to-make-one-thats-the-same-size-as-the-original",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "Why do we compress the data just to make one that’s the same size as the original?",
+    "text": "Why do we compress the data just to make one that’s the same size as the original?\nIt might seem useless to compress the info and then make it just as big. Isn’t the compressed version just a worse version of the original? Compression means some data is lost so it can’t be as good, right?\nThe true reason is that the eventual output isn’t the important part. Instead, the compressed version of the data (also called the bottleneck) is what is important."
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#how-does-the-compressed-data-help-us",
+    "href": "posts/anomaly-detection/index.html#how-does-the-compressed-data-help-us",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "How does the compressed data help us?",
+    "text": "How does the compressed data help us?\nIdeally, the compression forces the neural network to preserve as much important information as possible. We make the bottleneck larger again so we can compare the original data against the compressed version. We can then use this for the anomaly detection portion of our task.\nWe plot the reconstructed output and the original output and look for large differences between the two. If there is a big difference and the reconstruction contains the most important info, then we can identify anomalies by looking at where the differences are. This is because if the most important information isn’t enough to estimate a value accurately, then it is likely not a typical value."
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#what-neural-network-architecture-do-we-use",
+    "href": "posts/anomaly-detection/index.html#what-neural-network-architecture-do-we-use",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "What neural network architecture do we use?",
+    "text": "What neural network architecture do we use?\nNow that we know what an autoencoder is, we know that it uses a neural network to accomplish its goal. There are many different types of neural networks though, how do we choose the best type?\nThe three main types (ANNs, CNNs, and RNNs) are all commonly used in ML models. One type of RNN, the LSTM, is especially popular for time series forecasting (what we are doing) because it mitigates the vanishing gradient issue of the default RNN while also allowing us to use momentum to preserve short-term and long-term trends in predictions.\nFor our purposes though, with our large amount of data, an LSTM isn’t viable because of speed limitations and computational efficiency reasons."
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#introducing-the-transformer",
+    "href": "posts/anomaly-detection/index.html#introducing-the-transformer",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "Introducing the Transformer",
+    "text": "Introducing the Transformer\nIf you’ve been anywhere near the ML community, I’m sure you’ve heard of the transformer. It’s being used everywhere in the Natural Language Processing (NLP) arena, being the basis of state-of-the-art models like ChatGPT and Google’s BERT.\nIts origin comes from the famous “Attention Is All You Need” paper, which revolutionized the world of NLP but now is being used to transform the world of time series forecasting. (If you want to learn more about how the transformer works and the original paper is a bit too abstract, here is an annotated explanation from Harvard NLP that breaks it down further)\n\nThe characteristics of the transformer itself, such as its attention mechanism that we believe would better capture long and short-term dependencies, seem to be more than suitable for our task. With its speed and ability to handle gigantic amounts of data, we decided this was the best basis for creating our time series forecasting ML model."
+  },
+  {
+    "objectID": "posts/anomaly-detection/index.html#final-product",
+    "href": "posts/anomaly-detection/index.html#final-product",
+    "title": "Autoencoder for Anomaly Detection",
+    "section": "Final Product",
+    "text": "Final Product\nFrom implementing this transformer-based autoencoder and training it on a large amount of sensor readings, we were able to produce a prediction model that identified outliers in a computationally efficient way. There remained another big question to solve, though.\nEven with the training and validation process, to be entirely sure we identify outliers correctly we need to train on as much data as possible to reduce the likelihood of false positives.\nWith such large amounts of data that can’t fit in memory alone, how can we use that much for training? Think about ChatGPT for example, how do you train on the whole internet if a machine can’t come close to storing all of it?\nThis leads us to the second project, the Data Generator, which aims to resolve this issue!\nIf you would like to see the code I used for this project or have any questions, feel free to contact me at any of the places listed in my contact section!"
+  },
+  {
+    "objectID": "posts/data-generator/index.html",
+    "href": "posts/data-generator/index.html",
+    "title": "Data Generator",
+    "section": "",
+    "text": "With such large amounts of data that can’t fit in memory alone, how can we use all of it for training?"
+  },
+  {
+    "objectID": "posts/data-generator/index.html#the-problem",
+    "href": "posts/data-generator/index.html#the-problem",
+    "title": "Data Generator",
+    "section": "The Problem",
+    "text": "The Problem\nWhen training a machine learning model, you always want to use as much data as possible, right? But what happens when the data available for training is so large that it won’t fit into memory?\nWith the limitations of machine memory, we often face a challenge: Should we use as much data as we can and stop there?\nThis is where the Data Generator comes into play.\nOur goal is to create a solution that splits large datasets into manageable chunks, allowing us to create and label small batches of data. This approach allows us to feed the model training data one piece at a time, without overwhelming memory.\nAt the same time, we want to track how these data batches are created, so we can ensure accuracy and transparency in the data generation process."
+  },
+  {
+    "objectID": "posts/data-generator/index.html#flowchart",
+    "href": "posts/data-generator/index.html#flowchart",
+    "title": "Data Generator",
+    "section": "Flowchart",
+    "text": "Flowchart\n\n\n\nData to model process"
+  },
+  {
+    "objectID": "posts/data-generator/index.html#basic-structure",
+    "href": "posts/data-generator/index.html#basic-structure",
+    "title": "Data Generator",
+    "section": "Basic Structure",
+    "text": "Basic Structure\nThe basic framework I used for creating this is from a blog post from Stanford and MIT grad students Afshine Amidi and Shervine Amidi. This framework uses TensorFlow and Keras to split files and create batches of data with a custom DataGenerator class. However, this framework has two main issues:\n\nThe data generator works wonderfully for sizes near that of the testing for this framework (around 65,000 rows), but when scaling to much larger sizes, the performance drops.\nThe framework uses split files with observations but does not show how the data is split. Instead, it shows what is done after the splitting has already been completed."
+  },
+  {
+    "objectID": "posts/data-generator/index.html#using-dask",
+    "href": "posts/data-generator/index.html#using-dask",
+    "title": "Data Generator",
+    "section": "Using Dask",
+    "text": "Using Dask\nDask is a Python library for parallel computing that helps scale our Pandas-based code to much larger datasets. It essentially stores Pandas dataframes within Pandas dataframes and offers delayed computation to offset computational problems. We can use this for splitting the files (as Dask allows us to load the entire dataset at once) and loading individual IDs in the DataGenerator class. With this, we can handle amounts of up to 1-10 TB (per Dask’s own testing) for our company data."
+  },
+  {
+    "objectID": "posts/data-generator/index.html#how-do-we-split-the-files",
+    "href": "posts/data-generator/index.html#how-do-we-split-the-files",
+    "title": "Data Generator",
+    "section": "How Do We Split the Files?",
+    "text": "How Do We Split the Files?\nWhile the given framework splits files by single observations, this would simply take up too much storage for much larger datasets, such as the one we have (with millions of rows). Instead, we group observations into much smaller groups, keeping them small enough to not surpass our storage capacity. For my working example, I grouped observations based on the month and day of each timestamp (one file per combination)."
+  },
+  {
+    "objectID": "posts/data-generator/index.html#final-product",
+    "href": "posts/data-generator/index.html#final-product",
+    "title": "Data Generator",
+    "section": "Final Product",
+    "text": "Final Product\nBased on local testing, our adapted framework was able to handle data more than 10x the size of the original framework! While the upper limit is yet to be found for further testing, the scalability of the tools used to build this generator gives us hope that it can serve as the foundation for a fully functional Data Generator in the future.\nIf you would like to see the code I used for this project or have any questions, feel free to contact me at any of the places listed in my contact section!"
   }
 ]

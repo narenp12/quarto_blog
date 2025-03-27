@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Naren Prakash">
+<meta name="dcterms.date" content="2024-12-24">
 
-<title>My Blog – Naren’s Personal Site</title>
+<title>Data Generator – Naren’s Personal Site</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,26 +25,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-c37a40b267d3139d93432c283e34c257.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-76a684d3da164f357bdb205775589213.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-c37a40b267d3139d93432c283e34c257.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-76a684d3da164f357bdb205775589213.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,77 +70,19 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-subtitle','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-subtitle","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Naren’s Personal Site</span>
     </a>
   </div>
@@ -151,7 +93,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -175,266 +117,99 @@ window.Quarto = {
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
-      <h1 class="title">My Blog</h1>
-                      </div>
+    <div class="quarto-title column-body">
+      <h1 class="title">Data Generator</h1>
+            <p class="subtitle lead">Done as a ML / Data Science Intern @ Halliburton</p>
+                                <div class="quarto-categories">
+                <div class="quarto-category">internship</div>
+                <div class="quarto-category">project</div>
+                <div class="quarto-category">Python</div>
+              </div>
+                  </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-left">
+  <div class="quarto-title-meta">
 
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>Naren Prakash </p>
+            </div>
+    </div>
       
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">December 24, 2024</p>
+      </div>
+    </div>
     
       
     </div>
     
   
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(6)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(2)</span></div><div class="category" data-category="YW5hbHlzaXM=">analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y2FyZWVy">career <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Y29kZQ==">code <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Z29hbHM=">goals <span class="quarto-category-count">(1)</span></div><div class="category" data-category="aW50ZXJuc2hpcA==">internship <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bmV3cw==">news <span class="quarto-category-count">(3)</span></div><div class="category" data-category="cHJvamVjdA==">project <span class="quarto-category-count">(3)</span></div></div></div>
+    
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block" id="quarto-document-content">
 
 
 
 
 
+<p><img src="datagen.jpg" class="img-fluid"></p>
+<p>With such large amounts of data that can’t fit in memory alone, how can we use all of it for training?</p>
+<hr>
+<section id="the-problem" class="level2">
+<h2 class="anchored" data-anchor-id="the-problem">The Problem</h2>
+<p>When training a machine learning model, you always want to use as much data as possible, right? But what happens when the data available for training is so large that it won’t fit into memory?</p>
+<p>With the limitations of machine memory, we often face a challenge: <strong>Should we use as much data as we can and stop there?</strong></p>
+<p>This is where the <strong>Data Generator</strong> comes into play.</p>
+<p>Our goal is to create a solution that splits large datasets into manageable chunks, allowing us to create and label small batches of data. This approach allows us to feed the model training data one piece at a time, without overwhelming memory.</p>
+<p>At the same time, we want to track how these data batches are created, so we can ensure accuracy and transparency in the data generation process.</p>
+<hr>
+</section>
+<section id="flowchart" class="level2">
+<h2 class="anchored" data-anchor-id="flowchart">Flowchart</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="neural-network-training-flowchart (1).svg" class="img-fluid figure-img"></p>
+<figcaption>Data to model process</figcaption>
+</figure>
+</div>
+<hr>
+</section>
+<section id="basic-structure" class="level2">
+<h2 class="anchored" data-anchor-id="basic-structure">Basic Structure</h2>
+<p>The basic framework I used for creating this is from a <a href="https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly">blog post</a> from Stanford and MIT grad students Afshine Amidi and Shervine Amidi. This framework uses TensorFlow and Keras to split files and create batches of data with a custom DataGenerator class. However, this framework has two main issues:</p>
+<ol type="1">
+<li>The data generator works wonderfully for sizes near that of the testing for this framework (around 65,000 rows), but when scaling to much larger sizes, the performance drops.</li>
+<li>The framework uses split files with observations but does not show how the data is split. Instead, it shows what is done after the splitting has already been completed.</li>
+</ol>
+<hr>
+</section>
+<section id="using-dask" class="level2">
+<h2 class="anchored" data-anchor-id="using-dask">Using Dask</h2>
+<p>Dask is a Python library for parallel computing that helps scale our Pandas-based code to much larger datasets. It essentially stores Pandas dataframes within Pandas dataframes and offers delayed computation to offset computational problems. We can use this for splitting the files (as Dask allows us to load the entire dataset at once) and loading individual IDs in the DataGenerator class. With this, we can handle amounts of up to 1-10 TB (per Dask’s own testing) for our company data.</p>
+<hr>
+</section>
+<section id="how-do-we-split-the-files" class="level2">
+<h2 class="anchored" data-anchor-id="how-do-we-split-the-files">How Do We Split the Files?</h2>
+<p>While the given framework splits files by single observations, this would simply take up too much storage for much larger datasets, such as the one we have (with millions of rows). Instead, we group observations into much smaller groups, keeping them small enough to not surpass our storage capacity. For my working example, I grouped observations based on the month and day of each timestamp (one file per combination).</p>
+<hr>
+</section>
+<section id="final-product" class="level2">
+<h2 class="anchored" data-anchor-id="final-product">Final Product</h2>
+<p>Based on local testing, our adapted framework was able to handle data more than 10x the size of the original framework! While the upper limit is yet to be found for further testing, the scalability of the tools used to build this generator gives us hope that it can serve as the foundation for a fully functional Data Generator in the future.</p>
+<p><em>If you would like to see the code I used for this project or have any questions, feel free to contact me at any of the places listed in my contact section!</em></p>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmV3cw==" data-listing-date-sort="1743050937000" data-listing-file-modified-sort="1743050937827" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="294">
-<div class="thumbnail">
-<p><a href="./posts/welcome/index.html" class="no-external"></a></p><a href="./posts/welcome/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/welcome/quarto.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/welcome/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/welcome/index.html" class="no-external">A new blog home</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/welcome/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
-news
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/welcome/index.html" class="no-external">This is very much not a sponsored post (though if they wanted to sponsor me I would absolutely accept) but after “discovering” quarto, I’ve decided to move my personal blog…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/welcome/index.html" class="no-external">
-<div class="listing-date">
-Mar 26, 2025
-</div>
-<div class="listing-author">
-Naren Prakash
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="bmV3cyUyQ2NvZGUlMkNhbmFseXNpcw==" data-listing-date-sort="1742965200000" data-listing-file-modified-sort="1742976558179" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
-<div class="thumbnail">
-<p><a href="./posts/post-with-code/index.html" class="no-external"></a></p><a href="./posts/post-with-code/index.html" class="no-external">
-<p><img loading="lazy" src="./posts/post-with-code/image.jpg" class="thumbnail-image"></p>
-</a><p><a href="./posts/post-with-code/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/post-with-code/index.html" class="no-external">Post With Code</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/post-with-code/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y29kZQ=='); return false;">
-code
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('YW5hbHlzaXM='); return false;">
-analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/post-with-code/index.html" class="no-external">This is a post with executable code.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/post-with-code/index.html" class="no-external">
-<div class="listing-date">
-Mar 26, 2025
-</div>
-<div class="listing-author">
-Harlow Malloc
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="bmV3cyUyQ3Byb2plY3Q=" data-listing-date-sort="1735624800000" data-listing-file-modified-sort="1743051981850" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="620">
-<div class="thumbnail">
-<p><a href="./posts/portfolio-website/index.html" class="no-external"></a></p><a href="./posts/portfolio-website/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/portfolio-website/website_image.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/portfolio-website/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/portfolio-website/index.html" class="no-external">Why I made this website</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/portfolio-website/index.html" class="no-external">A 2024 Winter Break project I finished up right before the new year</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('bmV3cw=='); return false;">
-news
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdA=='); return false;">
-project
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/portfolio-website/index.html" class="no-external">Note: This is about my professional website. Check it out if you haven’t!</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/portfolio-website/index.html" class="no-external">
-<div class="listing-date">
-Dec 31, 2024
-</div>
-<div class="listing-author">
-Naren Prakash
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Z29hbHMlMkNjYXJlZXI=" data-listing-date-sort="1735020000000" data-listing-file-modified-sort="1743051555524" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="749">
-<div class="thumbnail">
-<p><a href="./posts/career-goal/index.html" class="no-external"></a></p><a href="./posts/career-goal/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/career-goal/general-fos-hero-2.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/career-goal/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/career-goal/index.html" class="no-external">How I ended up wanting to become a data scientist (a long post)</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/career-goal/index.html" class="no-external">A decision I made in the summer of 2022</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Z29hbHM='); return false;">
-goals
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Y2FyZWVy'); return false;">
-career
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/career-goal/index.html" class="no-external">To be honest I never really anticipated finding myself in this position. For pretty much as long as I could remember, I was convinced I was going to become a scientist.…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/career-goal/index.html" class="no-external">
-<div class="listing-date">
-Dec 24, 2024
-</div>
-<div class="listing-author">
-Naren Prakash
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="aW50ZXJuc2hpcCUyQ3Byb2plY3QlMkNQeXRob24=" data-listing-date-sort="1735020000000" data-listing-file-modified-sort="1743053064167" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="903">
-<div class="thumbnail">
-<p><a href="./posts/anomaly-detection/index.html" class="no-external"></a></p><a href="./posts/anomaly-detection/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/anomaly-detection/Halliburton-Truck.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/anomaly-detection/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/anomaly-detection/index.html" class="no-external">Autoencoder for Anomaly Detection</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/anomaly-detection/index.html" class="no-external">Done as a ML / Data Science Intern @ Halliburton</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJuc2hpcA=='); return false;">
-internship
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdA=='); return false;">
-project
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">
-Python
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/anomaly-detection/index.html" class="no-external">We all know equipment maintenance is important for saving money, reducing waste, and preventing accidents as a result of equipment malfunctions.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/anomaly-detection/index.html" class="no-external">
-<div class="listing-date">
-Dec 24, 2024
-</div>
-<div class="listing-author">
-Naren Prakash
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="aW50ZXJuc2hpcCUyQ3Byb2plY3QlMkNQeXRob24=" data-listing-date-sort="1735020000000" data-listing-file-modified-sort="1743052968593" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="512">
-<div class="thumbnail">
-<p><a href="./posts/data-generator/index.html" class="no-external"></a></p><a href="./posts/data-generator/index.html" class="no-external">
-<p class="card-img-top"><img src="posts/data-generator/datagen.jpg"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./posts/data-generator/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./posts/data-generator/index.html" class="no-external">Data Generator</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./posts/data-generator/index.html" class="no-external">Done as a ML / Data Science Intern @ Halliburton</a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('aW50ZXJuc2hpcA=='); return false;">
-internship
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('cHJvamVjdA=='); return false;">
-project
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">
-Python
-</div>
-</div>
-<div class="listing-description">
-<a href="./posts/data-generator/index.html" class="no-external">With such large amounts of data that can’t fit in memory alone, how can we use all of it for training?</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./posts/data-generator/index.html" class="no-external">
-<div class="listing-date">
-Dec 24, 2024
-</div>
-<div class="listing-author">
-Naren Prakash
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

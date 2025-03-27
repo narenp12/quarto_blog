@@ -1,0 +1,104 @@
+---
+title: "Autoencoder for Anomaly Detection"
+subtitle: "Done as a ML / Data Science Intern @ Halliburton"
+author: "Naren Prakash"
+date: "2024-12-24"
+categories: [internship, project, Python]
+---
+
+![](Halliburton-Truck.jpg)
+
+## The Problem
+
+We all know equipment maintenance is important for saving money, reducing waste, and preventing accidents as a result of equipment malfunctions.
+
+In this case, we want to make sure company trucks function properly by monitoring the input data from the sensors on each truck. **How do we set up an alert system so that when the sensor has abnormal readings, we can immediately take a look at the equipment to prevent accidents?**
+
+Traditional statistical methods have many definitions for an outlier we could use to identify those readings. However, with so much sensor data, it might be better to use a larger scale ML model to identify these in real time so prompt action can be taken.
+
+---
+
+## Idea: Reconstruction Autoencoder
+
+This is where the **reconstruction autoencoder** comes into play.
+
+We can use this machine learning model to identify anomalies in real time! Before delving into how we created it, let’s break down what this means.
+
+---
+
+## What even is an autoencoder?
+
+An autoencoder is a type of neural network that takes in a large amount of high dimensional data and compresses the information into a smaller representation. After this, it expands the compressed representation into a representation of equal size to the original.
+
+There are **two main parts** of the autoencoder:
+---
+
+![](ae.png)
+
+---
+
+## Encoder
+
+This is where we compress the input data into a smaller representation.
+
+For example, say we have a dataset with 500,000 dimensions. We create a representation of the data with only 300 dimensions.
+
+---
+
+## Decoder
+
+This is where we take the compressed representation and reconstruct the original data.
+
+In this example, we would take the 300-dimension representation and create a dataset with 500,000 dimensions (just like the original set).
+
+---
+
+## Why do we compress the data just to make one that's the same size as the original?
+
+It might seem useless to compress the info and then make it just as big. Isn’t the compressed version just a worse version of the original? Compression means some data is lost so it can’t be as good, right?
+
+The true reason is that the eventual output isn’t the important part. Instead, the **compressed version of the data** (also called the bottleneck) is what is important.
+
+---
+
+## How does the compressed data help us?
+
+Ideally, the compression forces the neural network to preserve as much important information as possible. We make the bottleneck larger again so we can compare the original data against the compressed version. We can then use this for the anomaly detection portion of our task.
+
+We plot the reconstructed output and the original output and look for large differences between the two. If there is a big difference and the reconstruction contains the most important info, then we can identify anomalies by looking at where the differences are. This is because if the most important information isn’t enough to estimate a value accurately, then it is likely not a typical value.
+
+---
+
+## What neural network architecture do we use?
+
+Now that we know what an autoencoder is, we know that it uses a neural network to accomplish its goal. There are many different types of neural networks though, how do we choose the best type?
+
+The three main types (ANNs, CNNs, and RNNs) are all commonly used in ML models. One type of RNN, the LSTM, is especially popular for time series forecasting (what we are doing) because it mitigates the vanishing gradient issue of the default RNN while also allowing us to use momentum to preserve short-term *and* long-term trends in predictions.
+
+For our purposes though, with our large amount of data, an LSTM isn’t viable because of speed limitations and computational efficiency reasons.
+
+---
+
+## Introducing the Transformer
+
+If you’ve been anywhere near the ML community, I’m sure you’ve heard of the transformer. It’s being used everywhere in the Natural Language Processing (NLP) arena, being the basis of state-of-the-art models like ChatGPT and Google’s BERT.
+
+Its origin comes from the famous ["Attention Is All You Need” paper](https://arxiv.org/abs/1706.03762), which revolutionized the world of NLP but now is being used to transform the world of time series forecasting. (If you want to learn more about how the transformer works and the original paper is a bit too abstract, [here is an annotated explanation](https://nlp.seas.harvard.edu/annotated-transformer/) from Harvard NLP that breaks it down further)
+
+![](transformer_1.png)
+
+The characteristics of the transformer itself, such as its attention mechanism that we believe would better capture long and short-term dependencies, seem to be more than suitable for our task. With its speed and ability to handle gigantic amounts of data, we decided this was the best basis for creating our time series forecasting ML model.
+
+---
+
+## Final Product
+
+From implementing this transformer-based autoencoder and training it on a large amount of sensor readings, we were able to produce a prediction model that identified outliers in a computationally efficient way. There remained another big question to solve, though.
+
+Even with the training and validation process, to be entirely sure we identify outliers correctly we need to train on *as much* data as possible to reduce the likelihood of false positives.
+
+With such large amounts of data that can’t fit in memory alone, how can we use that much for training? Think about ChatGPT for example, how do you train on the whole internet if a machine can’t come close to storing all of it?
+
+This leads us to the second project, [the Data Generator](/posts/data-generator), which aims to resolve this issue!
+
+*If you would like to see the code I used for this project or have any questions, feel free to contact me at any of the places listed in my contact section!*

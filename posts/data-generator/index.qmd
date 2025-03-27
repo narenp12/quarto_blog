@@ -1,0 +1,60 @@
+---
+title: "Data Generator"
+subtitle: "Done as a ML / Data Science Intern @ Halliburton"
+author: "Naren Prakash"
+date: "2024-12-24"
+categories: [internship, project, Python]
+---
+
+![](datagen.jpg)
+
+With such large amounts of data that can’t fit in memory alone, how can we use all of it for training?
+
+---
+
+## The Problem
+
+When training a machine learning model, you always want to use as much data as possible, right? But what happens when the data available for training is so large that it won't fit into memory?
+
+With the limitations of machine memory, we often face a challenge: **Should we use as much data as we can and stop there?**
+
+This is where the **Data Generator** comes into play.
+
+Our goal is to create a solution that splits large datasets into manageable chunks, allowing us to create and label small batches of data. This approach allows us to feed the model training data one piece at a time, without overwhelming memory.
+
+At the same time, we want to track how these data batches are created, so we can ensure accuracy and transparency in the data generation process.
+
+---
+
+## Flowchart
+
+![Data to model process](neural-network-training-flowchart%20(1).svg)
+
+---
+
+## Basic Structure
+
+The basic framework I used for creating this is from a [blog post](https://stanford.edu/~shervine/blog/keras-how-to-generate-data-on-the-fly) from Stanford and MIT grad students Afshine Amidi and Shervine Amidi. This framework uses TensorFlow and Keras to split files and create batches of data with a custom DataGenerator class. However, this framework has two main issues:
+
+1. The data generator works wonderfully for sizes near that of the testing for this framework (around 65,000 rows), but when scaling to much larger sizes, the performance drops.
+2. The framework uses split files with observations but does not show how the data is split. Instead, it shows what is done after the splitting has already been completed.
+
+---
+
+## Using Dask
+
+Dask is a Python library for parallel computing that helps scale our Pandas-based code to much larger datasets. It essentially stores Pandas dataframes within Pandas dataframes and offers delayed computation to offset computational problems. We can use this for splitting the files (as Dask allows us to load the entire dataset at once) and loading individual IDs in the DataGenerator class. With this, we can handle amounts of up to 1-10 TB (per Dask’s own testing) for our company data.
+
+---
+
+## How Do We Split the Files?
+
+While the given framework splits files by single observations, this would simply take up too much storage for much larger datasets, such as the one we have (with millions of rows). Instead, we group observations into much smaller groups, keeping them small enough to not surpass our storage capacity. For my working example, I grouped observations based on the month and day of each timestamp (one file per combination).
+
+---
+
+## Final Product
+
+Based on local testing, our adapted framework was able to handle data more than 10x the size of the original framework! While the upper limit is yet to be found for further testing, the scalability of the tools used to build this generator gives us hope that it can serve as the foundation for a fully functional Data Generator in the future.
+
+*If you would like to see the code I used for this project or have any questions, feel free to contact me at any of the places listed in my contact section!*
