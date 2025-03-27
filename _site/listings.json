@@ -3,7 +3,6 @@
     "listing": "/index.html",
     "items": [
       "/posts/welcome/index.html",
-      "/posts/post-with-code/index.html",
       "/posts/portfolio-website/index.html",
       "/posts/career-goal/index.html",
       "/posts/anomaly-detection/index.html",

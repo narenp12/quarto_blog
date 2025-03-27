@@ -1,7 +1,7 @@
 ---
 title: "A new blog home"
 author: "Naren Prakash"
-date: last-modified
+date: "2025-03-26"
 categories: [news]
 ---
 
