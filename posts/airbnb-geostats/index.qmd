@@ -1,0 +1,14 @@
+---
+title: "Analyzing Airbnb Prices from a Geostatistical Approach"
+subtitle: "Applying my coursework from STATS C173/C283"
+author: "Naren Prakash"
+date: now
+categories: [R, project, UCLA]
+---
+
+![A picture of the Airbnb logo I actually like](airbnb_logo_detail.jpg)
+
+Predicting the price of Airbnb listings is a pretty standard project for most people in the stats / data science / ML space. I mean, the data is fairly comprehensive and large and is easily publicly accessible. So what makes this project any different? 
+
+I wanted to try looking at this pretty standard problem through a completely different lens. After taking STATS C173/283 at UCLA (one class btw it's just cross-listed so the designation is odd) I learned about kriging and spacial prediction and testing techniques. Specifically, accounting for spatial autocorrelation in a variable for predicting new values of the same value. Generally, this is applied to more natural phenomena like weather events that are easily designated as geostatistical events. However, I thought it would make sense to consider Airbnb listing themselves a form of geostatistical data. 
+

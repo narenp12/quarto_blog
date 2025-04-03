@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/airbnb-geostats/index.html",
       "/posts/welcome/index.html",
       "/posts/portfolio-website/index.html",
       "/posts/anomaly-detection/index.html",
