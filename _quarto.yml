@@ -6,6 +6,8 @@ website:
   navbar:
     right:
       - about.qmd
+      - icon: person-square
+        href: https://www.naren-p.com/
       - icon: github
         href: https://github.com/narenp12
       - icon: linkedin
