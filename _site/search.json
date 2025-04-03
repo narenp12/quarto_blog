@@ -1,59 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "My Blog",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "A new blog home\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 26, 2025\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nWhy I made this website\n\n\nA 2024 Winter Break project I finished up right before the new year\n\n\n\nnews\n\n\nproject\n\n\n\n\n\n\n\n\n\nDec 31, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nHow I ended up wanting to become a data scientist (a long post)\n\n\nA decision I made in the summer of 2022\n\n\n\ngoals\n\n\ncareer\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nAutoencoder for Anomaly Detection\n\n\nDone as a ML / Data Science Intern @ Halliburton\n\n\n\ninternship\n\n\nproject\n\n\nPython\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nData Generator\n\n\nDone as a ML / Data Science Intern @ Halliburton\n\n\n\ninternship\n\n\nproject\n\n\nPython\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "posts/data-generator/index.html",
-    "href": "posts/data-generator/index.html",
-    "title": "Data Generator",
-    "section": "",
-    "text": "With such large amounts of data that can’t fit in memory alone, how can we use all of it for training?"
-  },
-  {
-    "objectID": "posts/data-generator/index.html#the-problem",
-    "href": "posts/data-generator/index.html#the-problem",
-    "title": "Data Generator",
-    "section": "The Problem",
-    "text": "The Problem\nWhen training a machine learning model, you always want to use as much data as possible, right? But what happens when the data available for training is so large that it won’t fit into memory?\nWith the limitations of machine memory, we often face a challenge: Should we use as much data as we can and stop there?\nThis is where the Data Generator comes into play.\nOur goal is to create a solution that splits large datasets into manageable chunks, allowing us to create and label small batches of data. This approach allows us to feed the model training data one piece at a time, without overwhelming memory.\nAt the same time, we want to track how these data batches are created, so we can ensure accuracy and transparency in the data generation process."
-  },
-  {
-    "objectID": "posts/data-generator/index.html#flowchart",
-    "href": "posts/data-generator/index.html#flowchart",
-    "title": "Data Generator",
-    "section": "Flowchart",
-    "text": "Flowchart\n\n\n\nData to model process"
-  },
-  {
-    "objectID": "posts/data-generator/index.html#basic-structure",
-    "href": "posts/data-generator/index.html#basic-structure",
-    "title": "Data Generator",
-    "section": "Basic Structure",
-    "text": "Basic Structure\nThe basic framework I used for creating this is from a blog post from Stanford and MIT grad students Afshine Amidi and Shervine Amidi. This framework uses TensorFlow and Keras to split files and create batches of data with a custom DataGenerator class. However, this framework has two main issues:\n\nThe data generator works wonderfully for sizes near that of the testing for this framework (around 65,000 rows), but when scaling to much larger sizes, the performance drops.\nThe framework uses split files with observations but does not show how the data is split. Instead, it shows what is done after the splitting has already been completed."
-  },
-  {
-    "objectID": "posts/data-generator/index.html#using-dask",
-    "href": "posts/data-generator/index.html#using-dask",
-    "title": "Data Generator",
-    "section": "Using Dask",
-    "text": "Using Dask\nDask is a Python library for parallel computing that helps scale our Pandas-based code to much larger datasets. It essentially stores Pandas dataframes within Pandas dataframes and offers delayed computation to offset computational problems. We can use this for splitting the files (as Dask allows us to load the entire dataset at once) and loading individual IDs in the DataGenerator class. With this, we can handle amounts of up to 1-10 TB (per Dask’s own testing) for our company data."
-  },
-  {
-    "objectID": "posts/data-generator/index.html#how-do-we-split-the-files",
-    "href": "posts/data-generator/index.html#how-do-we-split-the-files",
-    "title": "Data Generator",
-    "section": "How Do We Split the Files?",
-    "text": "How Do We Split the Files?\nWhile the given framework splits files by single observations, this would simply take up too much storage for much larger datasets, such as the one we have (with millions of rows). Instead, we group observations into much smaller groups, keeping them small enough to not surpass our storage capacity. For my working example, I grouped observations based on the month and day of each timestamp (one file per combination)."
-  },
-  {
-    "objectID": "posts/data-generator/index.html#final-product",
-    "href": "posts/data-generator/index.html#final-product",
-    "title": "Data Generator",
-    "section": "Final Product",
-    "text": "Final Product\nBased on local testing, our adapted framework was able to handle data more than 10x the size of the original framework! While the upper limit is yet to be found for further testing, the scalability of the tools used to build this generator gives us hope that it can serve as the foundation for a fully functional Data Generator in the future.\nIf you would like to see the code I used for this project or have any questions, feel free to contact me at any of the places listed in my contact section!"
+    "text": "Hello! My name is Naren Prakash and I’m an upcoming graduate of UCLA majoring in Statistics and Data Science. I really want to become a data scientist and so this is a little chronicle of my personal thoughts and also a bit of my road to hopefully achieving my dream.\nThis is my personal website to post into the abyss about the things I like and things I am doing / want to do in my free time."
   },
   {
     "objectID": "posts/portfolio-website/index.html",
@@ -75,13 +26,6 @@
     "title": "A new blog home",
     "section": "",
     "text": "This is very much not a sponsored post (though if they wanted to sponsor me I would absolutely accept) but after “discovering” quarto, I’ve decided to move my personal blog and my more in-depth project writeups to this quarto based site!\nI first learned about quarto this past quarter, thanks to my wonderful Professor Vivian Lew who I had the pleasure of having this past winter quarter for the first part of my statistical consulting capstone at UCLA. As someone who loves scientific computing, it has completely revolutionized a bunch of the things I did before. I love how markdown based it is, as I switched to markdown for all my note-taking prior to my final year here at UCLA. It makes formatting a breeze for someone aesthetically challenged like me. It also saves me from having to learn more front-end development (React is cool but I really don’t want to learn more than I need to).\nThat, plus the ability to integrate code directly with R and Python (my two favorite languages) made me ditch the manual .jsx files I was using to write up on my professional website and switch to quarto for every need it could possibly satisfy. That and I thought it might be a good idea to keep my personal little parts of the website and my corner of the Internet in its own place.\nAll of this leads me to a happy declaration that this is my official first quarto blog post and hopefully the first of many more! I hope to make some nice walkthroughs of my favorite personal projects and just some more personal posts to put into the abyss.\nNote: If you’re wondering, the posts below this in chronological order are converted from my previous blog setup."
-  },
-  {
-    "objectID": "posts/career-goal/index.html#who-knows-what-they-want-to-major-in-anyway",
-    "href": "posts/career-goal/index.html#who-knows-what-they-want-to-major-in-anyway",
-    "title": "How I ended up wanting to become a data scientist (a long post)",
-    "section": "Who knows what they want to major in anyway?",
-    "text": "Who knows what they want to major in anyway?\nTo be honest I never really anticipated finding myself in this position. For pretty much as long as I could remember, I was convinced I was going to become a scientist. Whether it be biology or chemistry, I knew the classes I enjoyed the most every single year were those science classes. Mathematics was the bane of my existence, a topic I had neither the talent nor the patience for. I would never choose a career with that as the focus.\nEven when it came to applying to college, I applied to colleges based on googling “best colleges for science” and then just choosing some that sounded like they had cool programs. Going into college my aspirations had changed a bit, but I was still of the belief I would become a scientist. I entered UCLA in 2021 as a Biology major, which was what I applied for in most of the applications I sent out. The first few quarters were fun, I mostly took the chemistry courses and math courses required for lower division life science requirements. To my own surprise, I really enjoyed the math for life scientists (shoutout Professor Jukka) but I really enjoyed the chemistry classes too. It wasn’t until my spring quarter that I was finally able to take what I came here for, a biology class.\nIt started off fine it wasn’t exactly some kind of dramatic realization I came to immediately. As the quarter progressed though I found myself falling asleep during lecture and just not being able to invest myself into the content. At first, I thought it was a general problem with my concentration and work. At the same time though, I was taking organic chemistry and seemed to have no issues staying alert in that class. As the year ended, I wasn’t sure if I truly wanted to be a biology student for the rest of my 4 years. That being said, I had already signed up for my classes for the next fall.\nAt first I refused to think of even leaving the life sciences department. If I left, what was the point of my entire first year? Did I just waste money and time? I spent my time reading about every offered major on the UCLA course websites, trying to decide what I really wanted to learn about. When I truly thought about it, I realized that maybe my enjoyment for the life sciences math wasn’t some random exception. After all, I had really enjoyed my time taking AP Statistics back in high school. Despite that, I feared not being proficient enough for the math and thought things might just be easier if I stayed doing what I was doing. After all, I couldn’t even enroll in new classes until much later as new student orientation had already begun.\nI talked to many people before ultimately making my decision, but I entered my new path Fall 2022 as I began taking the math prerequisite courses for becoming a stats major. Though I did have to make some adjustments initially, it didn’t take long for me to realize I had made the right decision for myself. Looking back at my own interests in hindsight, it almost seemed obvious the entire time. When I was little, I loved memorizing sports statistics, especially the stats of my favorite athletes. When I first learned programming and computer science in high school, the first independent projects I created were all sports statistics related. I had just attributed this to my love for sports, but perhaps that interest was always there and I just had a mental block.\nSince changing my major, I can confidently say I have no regrets at all. I’ve truly enjoyed every single class I’ve taken since that day. Every day I spend in class or working on something only furthers my belief that I’m in this for life. Getting paid to do the most fun stuff of all time? That career sounds way too good to be true, but I really cannot think of a better way to live. That being said, I don’t regret the path I was on before switching. Sometimes I think about what I could’ve done with that extra time, but there are many experiences I don’t get in that timeline. As for this timeline, I’m just going to put my head down and keep trying to learn about a field that is always changing. Living in the age of information is truly a blessing, and I fully intend to take advantage of it.\nShoutout to the entire UCLA Statistics department for providing such a fun and comprehensive education. Professor Christou you are my GOAT."
   },
   {
     "objectID": "posts/anomaly-detection/index.html#the-problem",
@@ -154,10 +98,66 @@
     "text": "Final Product\nFrom implementing this transformer-based autoencoder and training it on a large amount of sensor readings, we were able to produce a prediction model that identified outliers in a computationally efficient way. There remained another big question to solve, though.\nEven with the training and validation process, to be entirely sure we identify outliers correctly we need to train on as much data as possible to reduce the likelihood of false positives.\nWith such large amounts of data that can’t fit in memory alone, how can we use that much for training? Think about ChatGPT for example, how do you train on the whole internet if a machine can’t come close to storing all of it?\nThis leads us to the second project, the Data Generator, which aims to resolve this issue!\nIf you would like to see the code I used for this project or have any questions, feel free to contact me at any of the places listed in my contact section!"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/data-generator/index.html",
+    "href": "posts/data-generator/index.html",
+    "title": "Data Generator",
     "section": "",
-    "text": "Hello! My name is Naren Prakash and I’m an upcoming graduate of UCLA majoring in Statistics and Data Science. I really want to become a data scientist and so this is a little chronicle of my personal thoughts and also a bit of my road to hopefully achieving my dream.\nThis is my personal website to post into the abyss about the things I like and things I am doing / want to do in my free time."
+    "text": "With such large amounts of data that can’t fit in memory alone, how can we use all of it for training?"
+  },
+  {
+    "objectID": "posts/data-generator/index.html#the-problem",
+    "href": "posts/data-generator/index.html#the-problem",
+    "title": "Data Generator",
+    "section": "The Problem",
+    "text": "The Problem\nWhen training a machine learning model, you always want to use as much data as possible, right? But what happens when the data available for training is so large that it won’t fit into memory?\nWith the limitations of machine memory, we often face a challenge: Should we use as much data as we can and stop there?\nThis is where the Data Generator comes into play.\nOur goal is to create a solution that splits large datasets into manageable chunks, allowing us to create and label small batches of data. This approach allows us to feed the model training data one piece at a time, without overwhelming memory.\nAt the same time, we want to track how these data batches are created, so we can ensure accuracy and transparency in the data generation process."
+  },
+  {
+    "objectID": "posts/data-generator/index.html#flowchart",
+    "href": "posts/data-generator/index.html#flowchart",
+    "title": "Data Generator",
+    "section": "Flowchart",
+    "text": "Flowchart\n\n\n\nData to model process"
+  },
+  {
+    "objectID": "posts/data-generator/index.html#basic-structure",
+    "href": "posts/data-generator/index.html#basic-structure",
+    "title": "Data Generator",
+    "section": "Basic Structure",
+    "text": "Basic Structure\nThe basic framework I used for creating this is from a blog post from Stanford and MIT grad students Afshine Amidi and Shervine Amidi. This framework uses TensorFlow and Keras to split files and create batches of data with a custom DataGenerator class. However, this framework has two main issues:\n\nThe data generator works wonderfully for sizes near that of the testing for this framework (around 65,000 rows), but when scaling to much larger sizes, the performance drops.\nThe framework uses split files with observations but does not show how the data is split. Instead, it shows what is done after the splitting has already been completed."
+  },
+  {
+    "objectID": "posts/data-generator/index.html#using-dask",
+    "href": "posts/data-generator/index.html#using-dask",
+    "title": "Data Generator",
+    "section": "Using Dask",
+    "text": "Using Dask\nDask is a Python library for parallel computing that helps scale our Pandas-based code to much larger datasets. It essentially stores Pandas dataframes within Pandas dataframes and offers delayed computation to offset computational problems. We can use this for splitting the files (as Dask allows us to load the entire dataset at once) and loading individual IDs in the DataGenerator class. With this, we can handle amounts of up to 1-10 TB (per Dask’s own testing) for our company data."
+  },
+  {
+    "objectID": "posts/data-generator/index.html#how-do-we-split-the-files",
+    "href": "posts/data-generator/index.html#how-do-we-split-the-files",
+    "title": "Data Generator",
+    "section": "How Do We Split the Files?",
+    "text": "How Do We Split the Files?\nWhile the given framework splits files by single observations, this would simply take up too much storage for much larger datasets, such as the one we have (with millions of rows). Instead, we group observations into much smaller groups, keeping them small enough to not surpass our storage capacity. For my working example, I grouped observations based on the month and day of each timestamp (one file per combination)."
+  },
+  {
+    "objectID": "posts/data-generator/index.html#final-product",
+    "href": "posts/data-generator/index.html#final-product",
+    "title": "Data Generator",
+    "section": "Final Product",
+    "text": "Final Product\nBased on local testing, our adapted framework was able to handle data more than 10x the size of the original framework! While the upper limit is yet to be found for further testing, the scalability of the tools used to build this generator gives us hope that it can serve as the foundation for a fully functional Data Generator in the future.\nIf you would like to see the code I used for this project or have any questions, feel free to contact me at any of the places listed in my contact section!"
+  },
+  {
+    "objectID": "posts/career-goal/index.html#who-knows-what-they-want-to-major-in-anyway",
+    "href": "posts/career-goal/index.html#who-knows-what-they-want-to-major-in-anyway",
+    "title": "How I ended up wanting to become a data scientist (a long post)",
+    "section": "Who knows what they want to major in anyway?",
+    "text": "Who knows what they want to major in anyway?\nTo be honest I never really anticipated finding myself in this position. For pretty much as long as I could remember, I was convinced I was going to become a scientist. Whether it be biology or chemistry, I knew the classes I enjoyed the most every single year were those science classes. Mathematics was the bane of my existence, a topic I had neither the talent nor the patience for. I would never choose a career with that as the focus.\nEven when it came to applying to college, I applied to colleges based on googling “best colleges for science” and then just choosing some that sounded like they had cool programs. Going into college my aspirations had changed a bit, but I was still of the belief I would become a scientist. I entered UCLA in 2021 as a Biology major, which was what I applied for in most of the applications I sent out. The first few quarters were fun, I mostly took the chemistry courses and math courses required for lower division life science requirements. To my own surprise, I really enjoyed the math for life scientists (shoutout Professor Jukka) but I really enjoyed the chemistry classes too. It wasn’t until my spring quarter that I was finally able to take what I came here for, a biology class.\nIt started off fine it wasn’t exactly some kind of dramatic realization I came to immediately. As the quarter progressed though I found myself falling asleep during lecture and just not being able to invest myself into the content. At first, I thought it was a general problem with my concentration and work. At the same time though, I was taking organic chemistry and seemed to have no issues staying alert in that class. As the year ended, I wasn’t sure if I truly wanted to be a biology student for the rest of my 4 years. That being said, I had already signed up for my classes for the next fall.\nAt first I refused to think of even leaving the life sciences department. If I left, what was the point of my entire first year? Did I just waste money and time? I spent my time reading about every offered major on the UCLA course websites, trying to decide what I really wanted to learn about. When I truly thought about it, I realized that maybe my enjoyment for the life sciences math wasn’t some random exception. After all, I had really enjoyed my time taking AP Statistics back in high school. Despite that, I feared not being proficient enough for the math and thought things might just be easier if I stayed doing what I was doing. After all, I couldn’t even enroll in new classes until much later as new student orientation had already begun.\nI talked to many people before ultimately making my decision, but I entered my new path Fall 2022 as I began taking the math prerequisite courses for becoming a stats major. Though I did have to make some adjustments initially, it didn’t take long for me to realize I had made the right decision for myself. Looking back at my own interests in hindsight, it almost seemed obvious the entire time. When I was little, I loved memorizing sports statistics, especially the stats of my favorite athletes. When I first learned programming and computer science in high school, the first independent projects I created were all sports statistics related. I had just attributed this to my love for sports, but perhaps that interest was always there and I just had a mental block.\nSince changing my major, I can confidently say I have no regrets at all. I’ve truly enjoyed every single class I’ve taken since that day. Every day I spend in class or working on something only furthers my belief that I’m in this for life. Getting paid to do the most fun stuff of all time? That career sounds way too good to be true, but I really cannot think of a better way to live. That being said, I don’t regret the path I was on before switching. Sometimes I think about what I could’ve done with that extra time, but there are many experiences I don’t get in that timeline. As for this timeline, I’m just going to put my head down and keep trying to learn about a field that is always changing. Living in the age of information is truly a blessing, and I fully intend to take advantage of it.\nShoutout to the entire UCLA Statistics department for providing such a fun and comprehensive education. Professor Christou you are my GOAT."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "My Blog",
+    "section": "",
+    "text": "A new blog home\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\nMar 26, 2025\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nWhy I made this website\n\n\nA 2024 Winter Break project I finished up right before the new year\n\n\n\nnews\n\n\nproject\n\n\n\n\n\n\n\n\n\nDec 31, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nAutoencoder for Anomaly Detection\n\n\nDone as a ML / Data Science Intern @ Halliburton\n\n\n\ninternship\n\n\nproject\n\n\nPython\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nData Generator\n\n\nDone as a ML / Data Science Intern @ Halliburton\n\n\n\ninternship\n\n\nproject\n\n\nPython\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\n\n\n\n\n\n\nHow I ended up wanting to become a data scientist (a long post)\n\n\nA decision I made in the summer of 2022\n\n\n\ngoals\n\n\ncareer\n\n\n\n\n\n\n\n\n\nDec 24, 2024\n\n\nNaren Prakash\n\n\n\n\n\n\nNo matching items"
   }
 ]

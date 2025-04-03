@@ -1,1 +1,1 @@
-Sitemap: https://phenomenal-sunshine-406614.netlify.app/sitemap.xml
+Sitemap: https://blog.naren-p.com/sitemap.xml
