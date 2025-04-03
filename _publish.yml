@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: b28ce2a1-fec2-4a43-b515-5bb42bd4128b
+      url: https://narenblog.netlify.app
