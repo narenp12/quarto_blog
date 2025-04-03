@@ -2,7 +2,7 @@ project:
   type: website
 
 website:
-  title: "Naren's Personal Site"
+  title: "np"
   navbar:
     right:
       - about.qmd
