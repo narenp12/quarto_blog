@@ -178,7 +178,7 @@ plot(samp)
 
 We use Cressie's weights as a compromise between the techniques of ordinary least squares and generalized least squares. This way we can reduce computation but also account for covariance structures.
 
-The two selected covariance functions are the exponential and spherical covariance functions,
+The two selected covariance functions are the exponential and spherical covariance functions.
 
 ```{r}
 exp_fit <- fit.variogram(samp, vgm(1.2, "Exp", 0.7, 0.3), fit.method = 2)
