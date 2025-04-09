@@ -9,6 +9,8 @@ format:
     toc: true
 ---
 
+
+
 ![A picture of the Airbnb logo I actually like](airbnb_logo_detail.jpg)
 
 Predicting the price of Airbnb listings is a pretty standard project for most people in the stats / data science / ML space. I mean, the data is fairly comprehensive and large and is easily publicly accessible. So what makes this project any different? 
@@ -21,6 +23,8 @@ Generally, this is applied to more natural phenomena, like weather events, that 
 
 Before I began my actual code, I wanted to set up my R environment to make it a bit more efficient.
 
+
+
 ```{r}
 library(doParallel)
 ncores <- detectCores()
@@ -28,7 +32,11 @@ clus <- makeCluster(ncores - 1)
 registerDoParallel(clus)
 ```
 
+
+
 I then loaded in the libraries I planned to use for this project.
+
+
 
 ```{r setup}
 library(tidyverse)
@@ -40,12 +48,15 @@ library(gridExtra)
 library(kableExtra)
 ```
 
+
+
 Before I started working with the data set, I had to do some modification. I selected the predictors I wanted to consider and made sure that no two listings had the same combination of latitude and longitude. I then dropped any observations with NA values and randomly sampled 1000 observations to create the final data set. After this, I created factors for the appropriate values and fixed some issues via manual inspection.
+
+
 
 ```{r, include=FALSE}
 austin_listings_orig <- read_csv("/home/narenprax/Documents/GitHub/STATS-C173-273/Final Project/listings.csv")
 ```
-
 
 ```{r}
 set.seed(0)
@@ -58,17 +69,25 @@ austin_listings <- austin_listings_orig %>%
   mutate_if(is.character, as.factor)
 austin_listings$price <- as.numeric(gsub("[^0-9\\.]", "", austin_listings$price))
 ```
+
+
 # Data Exploration and non-spatial analysis
 
 Before delving into the analysis, I wanted to do some exploratory data analysis of our finalized dataset.
 
 ## Data overview
+
+
 ```{r}
 library(DataExplorer)
 plot_intro(austin_listings)
 kable(summary(austin_listings))
 ```
+
+
 ## Numerical exploration
+
+
 
 ```{r, message=FALSE, warning=FALSE}
 long_hist <- austin_listings %>% ggplot(aes(x = longitude)) +
@@ -93,9 +112,13 @@ price_hist <- austin_listings %>% ggplot(aes(x = price)) +
 grid.arrange(long_hist, lat_hist, bed_hist, bath_hist, beds_hist, price_hist, nrow = 3)
 ```
 
+
+
 We can see that most of the numeric variables have very skewed distributions.
 
 ## Categorical data exploration
+
+
 
 ```{r, fig.height=15}
 bar_prop <- austin_listings %>% ggplot(aes(x = property_type)) +
@@ -106,18 +129,26 @@ bar_room <- austin_listings %>% ggplot(aes(x = room_type)) +
   coord_flip()
 grid.arrange(bar_prop, bar_room)
 ```
+
+
 The property type graph shows a clear majority of listings are entire homes or rental units, which is unsurprising given Airbnb marketing. A notable thing I noticed here was that there were listings that were rooms in hotels, which seemed contradictory to the whole concept of Airbnb. 
 
 ## Variable relationship exploration
 
+
+
 ```{r, fig.height=15, fig.width=15}
 plot_correlation(austin_listings)
 ```
+
+
 We can see some noticeable correlation among many of the predictors, with the private room type and the entire home apartment room type having the strongest correlation.
 
 Now that we've gotten an understanding of what our data looks like, we proceed to the non-spatial analysis component. 
 
 ## Non-spatial analysis - LASSO regression for variable selection
+
+
 
 ```{r}
 library(glmnet)
@@ -134,6 +165,8 @@ lam <- cv.model$lambda.min
 best_mod <- glmnet(X, y, alpha = 1, lambda = lam)
 coef(best_mod)
 ```
+
+
 Based on the LASSO method of variable selection, only the variable bathrooms is a significant predictor for the price of a individual listing. However, knowing there is another variable with relation to price helps us decide the specific kriging method for the best price prediction model. 
 
 With that, we move on to geospatial analysis.
@@ -141,6 +174,8 @@ With that, we move on to geospatial analysis.
 # Geospatial Analysis
 
 ## h-scatterplots and correlogram
+
+
 
 ```{r}
 library(sp)
@@ -161,6 +196,8 @@ axis(1, at = seq(10, 240, by = 20), labels = seq(10, 240, by = 20))
 axis(2, at = seq(0, 1, by = 0.1), labels = seq(0, 1, by = 0.1))
 ```
 
+
+
 Both the h-scatterplots and the correlogram indicate that there seems to be spatial correlation between points. This is especially noticeable in the correlogram as we can visualize a clear negative trend in correlation coefficient as the separation distance increases. This seems to justify our spatial correlation approach.
 
 ## Variograms
@@ -169,16 +206,22 @@ Both the h-scatterplots and the correlogram indicate that there seems to be spat
 
 Scaling is done here to make variogram creation easier later on.
 
+
+
 ```{r}
 g <- gstat(id = "scaled price", formula = scale(price) ~ 1, locations = ~ longitude + latitude, data = austin_listings)
 samp <- variogram(g)
 plot(samp)
 ```
+
+
 ### Different covariance function fits (using Cressie's weights)
 
 We use Cressie's weights as a compromise between the techniques of ordinary least squares and generalized least squares. This way we can reduce computation but also account for covariance structures.
 
 The two selected covariance functions are the exponential and spherical covariance functions.
+
+
 
 ```{r}
 exp_fit <- fit.variogram(samp, vgm(1.2, "Exp", 0.7, 0.3), fit.method = 2)
@@ -189,9 +232,13 @@ sph_fit <- fit.variogram(samp, vgm(1.2, "Sph", 0.7, 0.3), fit.method = 2)
 plot(samp, exp_fit)
 plot(samp, sph_fit)
 ```
+
+
 Visually it is hard to choose the best covariance function. Instead, we will minimize PRESS (predicted residual error sum of squares). Through cross-validation, we'll select a covariance function for our model.
 
 ### Cross validation
+
+
 
 ```{r}
 sl <- sample(1:1000, 700)
@@ -209,6 +256,7 @@ summary(difference)
 press1 <- sum(difference^2)
 press1
 ```
+
 ```{r}
 cvalid <- krige(id = "scaledprice", scale(price) ~ 1, locations = ~ longitude + latitude, model = sph_fit, data = train, newdata = test)
 
@@ -219,6 +267,8 @@ press2 <- sum(difference^2)
 press2
 ```
 
+
+
 We see here that the spherical covariance model minimizes PRESS so we continue onward with this covariance function.
 
 ## Kriging
@@ -226,6 +276,8 @@ We see here that the spherical covariance model minimizes PRESS so we continue o
 We know there is one related variable, bathrooms, that has the most correlation with price. Let's investigate whether cokriging with this predictor would be the best approach to price prediction.
 
 ### Ordinary kriging
+
+
 
 ```{r}
 x.range <- as.integer(range(austin_listings[, 1]))
@@ -235,16 +287,22 @@ grd <- expand.grid(
   latitude = seq(from = y.range[1], to = y.range[2], by = 0.001)
 )
 ```
+
 ```{r}
 pred <- krige.cv(formula = scale(price) ~ 1, data = austin_listings, locations = ~ longitude + latitude)
 ```
+
 ```{r}
 mean(pred$residual)
 ```
 
+
+
 ### Ordinary Co-kriging
 
 Adding the covariate and looking at the variogram plots:
+
+
 
 ```{r}
 all <- gstat(g, id = "bathrooms", formula = scale(bathrooms) ~ 1, locations = ~ longitude + latitude, data = austin_listings)
@@ -261,10 +319,12 @@ ck <- predict(all_fit, grd)
 ```{r, results='hide'}
 cok <- gstat.cv(all_fit)
 ```
+
 ```{r}
 print(head(pred))
 print(head(ck))
 ```
+
 ```{r}
 library(lattice)
 
@@ -277,6 +337,8 @@ levelplot(ck$`scaled price.var` ~ longitude + latitude, ck,
   main = "ordinary co-kriging variance"
 )
 ```
+
+
 We can see lots of uniformity between the co-kriging predictions and variance. **Is it better than ordinary kriging?**
 
 In this case, it looks like ordinary kriging is better as the cokriging results are too uniform and don't accurately capture the variation in pricing amongst Austin listings. Therefore, our final model is the spherical covariance model with ordinary kriging.
@@ -284,3 +346,4 @@ In this case, it looks like ordinary kriging is better as the cokriging results 
 ## Note for ultimate Kriging Predictions
 
 It should be noted that for the purposes of actual price prediction, the inputs of this model must be scaled which means that the resulting predictions have to be un-scaled to the original units.
+
