@@ -11,3 +11,22 @@ format:
 
 ![The lines don't look like this at all at the time I'm making this post](stocks.jpg)
 
+In this post, I'll be optimizing a portfolio of selected stocks in different industries with various models as a showcase of what I learned from taking STATS C183/C283 (Statistical Models in Finance) with my GOAT Professor Christou.
+
+The portfolio is constructed as follows.
+
+**Five main industries:** Technology, Financial Services, Healthcare, Consumer Cyclical, Communication Services
+
+(Note: All data comes from Yahoo Finance, including historical pricing and specific stock information. This project was done with data from January 2016 to September 2024.)
+
+**Technology:** AAPL (Apple), MSFT (Microsoft), NVDA (NVIDIA), CRM (Salesforce), CSCO (Cisco), ORCL (Oracle)
+
+**Financial Services:** BRK-B (Berkshire Hathaway Inc Class B), JPM (JP Morgan), BAC (Bank of America), WFC (Wells Fargo), BX (Blackstone), GS (Goldman Sachs)
+
+**Healthcare:** LLY (Eli Lilly), UNH (UnitedHealth), JNJ (Johnson & Johnson), ABBV (AbbVie), TMO (Thermo Fisher Scientific), AMGN (Amgen)
+
+**Consumer Cyclical:** AMZN (Amazon), TSLA (Tesla), HD (Home Depot), MCD (McDonald's), NKE (Nike), TJX
+
+**Communication Services:** GOOG (Google), META, NFLX (Netflix), VZ (Verizon), DIS (Disney), T (AT&T)
+
+We then use the **S&P 500** (^GSPC) as our market index for comparison.
