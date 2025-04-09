@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Naren Prakash">
-<meta name="dcterms.date" content="2025-04-08">
+<meta name="dcterms.date" content="2025-04-06">
 
 <title>Analyzing Airbnb Prices from a Geostatistical Approach – np</title>
 <style>
@@ -158,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
       <h1 class="title">Analyzing Airbnb Prices from a Geostatistical Approach</h1>
-            <p class="subtitle lead">Applying my coursework from STATS C173/C283</p>
+            <p class="subtitle lead">Applying my coursework from STATS C173/C273</p>
                                 <div class="quarto-categories">
                 <div class="quarto-category">R</div>
                 <div class="quarto-category">project</div>
@@ -180,7 +180,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">April 8, 2025</p>
+        <p class="date">April 6, 2025</p>
       </div>
     </div>
     
@@ -218,7 +218,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#ordinary-kriging" id="toc-ordinary-kriging" class="nav-link" data-scroll-target="#ordinary-kriging">Ordinary kriging</a></li>
   <li><a href="#ordinary-co-kriging" id="toc-ordinary-co-kriging" class="nav-link" data-scroll-target="#ordinary-co-kriging">Ordinary Co-kriging</a></li>
   </ul></li>
-  <li><a href="#ultimate-kriging-predictions" id="toc-ultimate-kriging-predictions" class="nav-link" data-scroll-target="#ultimate-kriging-predictions">Ultimate Kriging Predictions</a></li>
+  <li><a href="#note-for-ultimate-kriging-predictions" id="toc-note-for-ultimate-kriging-predictions" class="nav-link" data-scroll-target="#note-for-ultimate-kriging-predictions">Note for ultimate Kriging Predictions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -237,7 +237,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </figure>
 </div>
 <p>Predicting the price of Airbnb listings is a pretty standard project for most people in the stats / data science / ML space. I mean, the data is fairly comprehensive and large and is easily publicly accessible. So what makes this project any different?</p>
-<p>I wanted to try looking at this pretty standard problem through a completely different lens. After taking STATS C173/283 at UCLA (one class btw it’s just cross-listed so the designation is odd) I learned about kriging and spatial prediction and testing techniques. Specifically, accounting for spatial autocorrelation in a variable for predicting new values of the same value.</p>
+<p>I wanted to try looking at this pretty standard problem through a completely different lens. After taking STATS C173/273 at UCLA (one class btw it’s just cross-listed so the designation is odd) I learned about kriging and spatial prediction and testing techniques. Specifically, accounting for spatial autocorrelation in a variable for predicting new values of the same value.</p>
 <p>Generally, this is applied to more natural phenomena, like weather events, that are easily designated as geostatistical events. However, I thought it would make sense to consider Airbnb listing themselves a form of geostatistical data. After all, prices vary by neighborhood and location is a prime determinant of listing price. With that in mind, I decided to see for myself if this was a valid way of price prediction.</p>
 <p><strong>Note: All the data used in this report is from the 14 December 2024 report of Airbnb data from <a href="https://insideairbnb.com/get-the-data/" class="uri">https://insideairbnb.com/get-the-data/</a>.</strong></p>
 <p>Before I began my actual code, I wanted to set up my R environment to make it a bit more efficient.</p>
@@ -821,8 +821,8 @@ problems later on. See ?make.names</code></pre>
 <p>In this case, it looks like ordinary kriging is better as the cokriging results are too uniform and don’t accurately capture the variation in pricing amongst Austin listings. Therefore, our final model is the spherical covariance model with ordinary kriging.</p>
 </section>
 </section>
-<section id="ultimate-kriging-predictions" class="level2">
-<h2 class="anchored" data-anchor-id="ultimate-kriging-predictions">Ultimate Kriging Predictions</h2>
+<section id="note-for-ultimate-kriging-predictions" class="level2">
+<h2 class="anchored" data-anchor-id="note-for-ultimate-kriging-predictions">Note for ultimate Kriging Predictions</h2>
 <p>It should be noted that for the purposes of actual price prediction, the inputs of this model must be scaled which means that the resulting predictions have to be un-scaled to the original units.</p>
 
 

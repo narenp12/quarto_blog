@@ -2,7 +2,7 @@
 title: "Analyzing Airbnb Prices from a Geostatistical Approach"
 subtitle: "Applying my coursework from STATS C173/C273"
 author: "Naren Prakash"
-date: now
+date: April 6, 2025
 categories: [R, project, UCLA]
 format:
   html:
