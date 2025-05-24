@@ -1,0 +1,30 @@
+---
+title: "The motivation of Research on Research on Research"
+subtitle: "My independent research project"
+author: "Naren Prakash"
+date: May 23, 2025
+categories: [Python, research, UCLA]
+format:
+  html:
+    toc: true
+---
+
+![The title page of my Undergraduate Research Week presentation](URW_RRRpresentation.pptx.png)
+
+It all started with an assigned reading. 
+
+For the first part of my two-part capstone as a Statistics major at UCLA, we were assigned chapters to read from the book **The Lady Tasting Tea by David Salsburg**. I was actually pretty excited to have a book assignment, something pretty rare from the courses I'd been used to that only referenced textbooks. 
+
+The book was incredible, providing a historical perspective of how statistics had developed into the field it is today. My coursework had focused on the technical aspects of fundamental statistical techniques, for us to understand why we valued them so much and what they sought to model or uncover. Despite this, I knew little about how the field of statistics itself had developed over time. Why was it only recently that Statistics became considered its own academic department, rather than a subset of the overall Mathematics department?
+
+I had the pleasure of learning about the circumstances that surrounded the creation of the very Statistics department I was part of from the faculty who had been there when it was created. Learning the history of the department only further solidified my love for the department and the professors I'd had that always encouraged learning above all else. That being said, I knew little about the history of statistics itself. That is, until I read this book.
+
+The book is a well-established classic and I'm not exactly singing the praises of some hidden gem. That being said, this was a book published before I was even born. Reading it was a truly incredible experience, with the construction of the book providing not only a timeline of statistical development, but a huge overlapping story. All of this was made even greater by the fact the book was written by **David Salsburg**, a statistician who not only had met many of the very people he wrote about but was a huge part of shaping the existence of statistics today. 
+
+It was a beautiful combination of contextual information, history, and chronicling the impact of the development of statistics on our society and other fields. As someone who had always been interested in history, I was even considering studying it at a time, as well as statistics (obviously) it was a combination I hadn't even considered. Salsburg's book is no doubt a well written and comprehensive overview of the history of statistics, but I wanted to know about how things had intensified in the last 30 years or so. I wanted to know about the history of statistics in the modern era. 
+
+I knew about some foundational papers in machine learning existed, like the famous "Attention is All You Need" paper that introduced the Transformer architecture and completely revolutionized techniques after it (which also probably has the best paper title I have ever seen which no doubt contributes to its legacy). For the most part though, I didn't have any type of historical narrative to follow for the development of the statistical and computational methods we use and seek to improve upon today. This led me to the creation of the idea for my project, **Research on Research on Research**.
+
+My goal was to create this kind of narrative and historical timeline for the fields that dominate the public sphere today, like reinforcement learning and the rise of artificial intelligence applications in EVERYTHING. Could everything be connected to the foundational statistics of the past in a clear way? I believed not only would this satisfy my own personal interest in the history, but it could also provide insight into what the future of these fields hold. 
+
+I've had a blast working on this project, and I hope to make it more complete and rigorous in the future. I hope to continue to add to it over time as I develop both technically and academically. Stay tuned!
