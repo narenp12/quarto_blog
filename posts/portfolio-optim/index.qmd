@@ -2,7 +2,7 @@
 title: "Statistical Stock Portfolio Optimization"
 subtitle: "Applying my coursework from STATS C183/C283"
 author: "Naren Prakash"
-date: now
+date: April 8, 2025
 categories: [R, project, UCLA]
 format:
   html:
